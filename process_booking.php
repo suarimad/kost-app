@@ -74,7 +74,7 @@ $totalPrice = ($pricePerMonth * $duration) + $depositAmount;
 $endDate = date('Y-m-d', strtotime("+$duration months", strtotime($startDate)));
 $orderId = 'INV-' . date('Ymd') . '-' . $userId . '-' . $roomId . '-' . rand(100, 999);
 
-// ==========================================
+// ========================================== 
 // 4. CEK KETERSEDIAAN KAMAR
 // ==========================================
 $stmtCheck = $pdo->prepare("SELECT is_booked, name FROM rooms WHERE id = ?");
